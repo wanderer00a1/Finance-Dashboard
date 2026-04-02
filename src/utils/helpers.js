@@ -1,4 +1,4 @@
-// Format a number as USD currency
+
 export function formatCurrency(amount) {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -7,7 +7,7 @@ export function formatCurrency(amount) {
   }).format(amount)
 }
 
-// Format a date string like "Mar 3, 2025"
+
 export function formatDate(dateStr) {
   return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
     month: 'short',
@@ -16,7 +16,7 @@ export function formatDate(dateStr) {
   })
 }
 
-// Calculate summary totals from a list of transactions
+
 export function getSummary(transactions) {
   const income   = transactions.filter(t => t.type === 'income').reduce((sum, t) => sum + t.amount, 0)
   const expenses = transactions.filter(t => t.type === 'expense').reduce((sum, t) => sum + t.amount, 0)
@@ -25,7 +25,7 @@ export function getSummary(transactions) {
   return { income, expenses, balance }
 }
 
-// Group expenses by category and return sorted array for charts
+
 export function getSpendingByCategory(transactions) {
   const expenseOnly = transactions.filter(t => t.type === 'expense')
   const grouped = {}
@@ -39,7 +39,7 @@ export function getSpendingByCategory(transactions) {
     .sort((a, b) => b.amount - a.amount)
 }
 
-// Group transactions by month for trend chart  e.g. "Jan", "Feb"
+
 export function getMonthlyTotals(transactions) {
   const months = {}
 

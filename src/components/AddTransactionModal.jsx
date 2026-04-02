@@ -6,7 +6,7 @@ import styles from './AddTransactionModal.module.css'
 export default function AddTransactionModal({ editTx, onClose }) {
   const { addTransaction, editTransaction } = useApp()
 
-  // Pre-fill form if editing an existing transaction
+  
   const [form, setForm] = useState({
     description: editTx?.description || '',
     amount:      editTx?.amount      || '',
@@ -42,7 +42,7 @@ export default function AddTransactionModal({ editTx, onClose }) {
   }
 
   return (
-    // Clicking the backdrop closes the modal
+  
     <div className={styles.backdrop} onClick={onClose}>
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
         <h3 className={styles.title}>{editTx ? 'Edit Transaction' : 'Add Transaction'}</h3>

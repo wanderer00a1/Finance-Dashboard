@@ -9,12 +9,12 @@ export default function TransactionList() {
   const { transactions, role, deleteTransaction } = useApp()
 
   const [search, setSearch]     = useState('')
-  const [typeFilter, setType]   = useState('')        // '' | 'income' | 'expense'
+  const [typeFilter, setType]   = useState('')        
   const [catFilter, setCat]     = useState('')
   const [sortField, setSortField] = useState('date')
   const [sortDir, setSortDir]   = useState('desc')
   const [showModal, setShowModal] = useState(false)
-  const [editTx, setEditTx]     = useState(null)      // transaction being edited
+  const [editTx, setEditTx]     = useState(null)      
 
   const isAdmin = role === 'admin'
 
@@ -144,7 +144,6 @@ export default function TransactionList() {
         </div>
       )}
 
-      {/* Modal */}
       {showModal && (
         <AddTransactionModal
           editTx={editTx}

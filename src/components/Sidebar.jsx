@@ -28,7 +28,7 @@ export default function Sidebar({ currentPage, onNavigate }) {
         ))}
       </nav>
 
-      {/* Role switcher at the bottom */}
+      
       <div className={styles.footer}>
         <label className={styles.roleLabel}>Role</label>
         <select

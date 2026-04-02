@@ -1,4 +1,4 @@
-// Mock transaction data to start with
+// transaction data to start with
 export const initialTransactions = [
   { id: 1, description: 'Monthly Salary',    type: 'income',  category: 'Salary',        amount: 5000, date: '2025-03-01' },
   { id: 2, description: 'Groceries',         type: 'expense', category: 'Food',           amount: 120,  date: '2025-03-03' },
@@ -26,7 +26,7 @@ export const CATEGORIES = [
   'Other',
 ]
 
-// Color for each category (used in charts + badges)
+// Color for each category 
 export const CATEGORY_COLORS = {
   Salary:        '#16a34a',
   Freelance:     '#2563eb',

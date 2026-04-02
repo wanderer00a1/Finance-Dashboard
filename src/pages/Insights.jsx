@@ -44,7 +44,6 @@ export default function Insights() {
     <div>
       <h1 className={styles.title}>Insights</h1>
 
-      {/* Insight cards */}
       <div className={styles.grid}>
         {insights.map(item => (
           <div key={item.label} className={styles.card}>
@@ -55,7 +54,6 @@ export default function Insights() {
         ))}
       </div>
 
-      {/* Spending breakdown table */}
       <div className={styles.panel}>
         <h2 className={styles.panelTitle}>Spending by Category</h2>
         {spending.length === 0 ? (
@@ -77,7 +75,6 @@ export default function Insights() {
         )}
       </div>
 
-      {/* Monthly comparison */}
       <div className={styles.panel}>
         <h2 className={styles.panelTitle}>Summary</h2>
         <div className={styles.summaryRow}>

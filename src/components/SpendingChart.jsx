@@ -53,7 +53,6 @@ export default function SpendingChart() {
             </PieChart>
           </ResponsiveContainer>
 
-          {/* Legend below chart */}
           <div className={styles.legend}>
             {data.slice(0, 5).map(item => (
               <div key={item.category} className={styles.legendItem}>
