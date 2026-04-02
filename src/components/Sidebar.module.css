@@ -1,0 +1,114 @@
+.sidebar {
+  width: 200px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.dot {
+  color: #16a34a;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 8px;
+}
+
+.navItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navItem:hover {
+  background: #f3f4f6;
+  color: #1a1a1a;
+}
+
+.navItem.active {
+  background: #f0fdf4;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 16px 16px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.roleLabel {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.roleSelect {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.admin {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.viewer {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 0;
+  }
+  .nav {
+    flex-direction: row;
+    padding: 0 12px;
+  }
+  .footer {
+    display: none;
+  }
+}
